@@ -24,8 +24,9 @@ class CreateProductsTable extends Migration
             $table->string('image', 100)->nullable();
 
             //creacion de llave foranea
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
+           // $table->unsignedBigInteger('sub_category_id');
+           // $table->foreign('sub_category_id')->references('id')->on('sub_categories'); 
+           $table->foreignId('sub_category_id')->constrained();
             
             $table->timestamps();
         });

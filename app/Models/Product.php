@@ -19,4 +19,8 @@ class Product extends Model
         'image',
         'category_id'
     ];
+
+     public function subCategory(){
+        return $this->belongsTo(SubCategory::class);
+    }
 }
