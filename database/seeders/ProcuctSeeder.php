@@ -19,9 +19,7 @@ class ProcuctSeeder extends Seeder
             'barCode' =>'1457851225',
             'cost' => 0.25,
             'price'=>0.45,
-            'stock' =>500,
-            'alerts' =>200,
-            'image'=>'virogrip.png',
+            'presentation_id'=>1,
             'sub_category_id'=>1
         ]);
         Product::create([
@@ -29,9 +27,7 @@ class ProcuctSeeder extends Seeder
             'barCode' =>'1457851225',
             'cost' => 0.25,
             'price'=>0.45,
-            'stock' =>500,
-            'alerts' =>200,
-            'image'=>'acetaminofen.png',
+            'presentation_id'=>2,
             'sub_category_id'=>3
         ]);
         Product::create([
@@ -39,9 +35,7 @@ class ProcuctSeeder extends Seeder
             'barCode' =>'1457851225',
             'cost' => 0.25,
             'price'=>0.45,
-            'stock' =>500,
-            'alerts' =>200,
-            'image'=>'vermagest.png',
+            'presentation_id'=>3,
             'sub_category_id'=>2
         ]);
         Product::create([
@@ -49,9 +43,7 @@ class ProcuctSeeder extends Seeder
             'barCode' =>'1457851225',
             'cost' => 0.25,
             'price'=>0.45,
-            'stock' =>500,
-            'alerts' =>200,
-            'image'=>'vermagest.png',
+            'presentation_id'=>4,
             'sub_category_id'=>4
         ]);
     }

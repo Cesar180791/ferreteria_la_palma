@@ -189,58 +189,16 @@
                 <div class="submenu" id="uiKit">
                     <ul class="submenu-list" data-parent-element="#uiKit"> 
                         <li>
-                            <a href="ui_alerts.html"> Alerts </a>
+                            <a href="{{ url('/presentation')}}"> Presentaciones </a>
                         </li>
                         <li>
-                            <a href="ui_avatar.html"> Avatar </a>
+                            <a href="{{ url('/products')}}"> Productos </a>
                         </li>
-                        <li>
-                            <a href="ui_badges.html"> Badges </a>
+                         <li>
+                            <a href="#"> Inventario </a>
                         </li>
-                        <li>
-                            <a href="ui_breadcrumbs.html"> Breadcrumbs </a>
-                        </li>                            
-                        <li>
-                            <a href="ui_buttons.html"> Buttons </a>
-                        </li>
-                        <li>
-                            <a href="ui_buttons_group.html"> Button Groups </a>
-                        </li>
-                        <li>
-                            <a href="ui_color_library.html"> Color Library </a>
-                        </li>
-                        <li>
-                            <a href="ui_dropdown.html"> Dropdown </a>
-                        </li>
-                        <li>
-                            <a href="ui_infobox.html"> Infobox </a>
-                        </li>
-                        <li>
-                            <a href="ui_jumbotron.html"> Jumbotron </a>
-                        </li>
-                        <li>
-                            <a href="ui_spinners.html"> Spinners </a>
-                        </li>
-                        <li>
-                            <a href="ui_pagination.html"> Pagination </a>
-                        </li>
-                        <li>
-                            <a href="ui_popovers.html"> Popovers </a>
-                        </li>
-                        <li>
-                            <a href="ui_progress_bar.html"> Progress Bar </a>
-                        </li>
-                        <li>
-                            <a href="ui_search.html"> Search </a>
-                        </li>
-                        <li>
-                            <a href="ui_tooltips.html"> Tooltips </a>
-                        </li>
-                        <li>
-                            <a href="ui_treeview.html"> Treeview </a>
-                        </li>
-                        <li>
-                            <a href="ui_typography.html"> Typography </a>
+                           <li>
+                            <a href="#"> Compras </a>
                         </li>
                     </ul>
                 </div>

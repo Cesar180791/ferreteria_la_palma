@@ -14,13 +14,15 @@ class Product extends Model
         'barCode',
         'cost',
         'price',
-        'stock',
-        'alerts',
-        'image',
-        'category_id'
+        'presentation_id',
+        'sub_category_id'
     ];
 
      public function subCategory(){
-        return $this->belongsTo(SubCategory::class);
+        return $this->belongsTo(SubCategory::class); 
+    }
+
+    public function presentation(){
+        return $this->belongsTo(Presentation::class); 
     }
 }

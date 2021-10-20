@@ -19,10 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('barCode',25)->nullable();
             $table->decimal('cost',10,2)->default(0);
             $table->decimal('price',10,2)->default(0);
-            $table->integer('stock');
-            $table->integer('alerts');
-            $table->string('image', 100)->nullable();
-
+            $table->foreignId('presentation_id')->constrained();
             //creacion de llave foranea
            // $table->unsignedBigInteger('sub_category_id');
            // $table->foreign('sub_category_id')->references('id')->on('sub_categories'); 

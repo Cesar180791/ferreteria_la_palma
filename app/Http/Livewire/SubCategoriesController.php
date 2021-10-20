@@ -7,7 +7,7 @@ use App\Models\SubCategory;
 use App\Models\Category;
 use Livewire\withPagination; //trait paginacion
 
-class SubCategoriesController extends Component
+class SubCategoriesController extends Component 
 {
     use withPagination; /*Traits de paginacion */
 

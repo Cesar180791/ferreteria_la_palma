@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(DenominationSeeder::class);
         $this->call(CategorySeeder::class);
         $this->call(SubCategorySeeder::class);
+        $this->call(PresentationSeeder::class);
         $this->call(ProcuctSeeder::class);
         $this->call(UserSeeder::class);
     }

@@ -140,7 +140,6 @@ class CategoriesController extends Component
     public function resetUI(){
         $this->name='';
         $this->description='';
-        $this->image = null;
         $this->search='';
         $this->selected_id=0;
     }
