@@ -5,6 +5,8 @@ use App\Http\Livewire\CategoriesController;
 use App\Http\Livewire\SubCategoriesController;
 use App\Http\Livewire\ProductsController;
 use App\Http\Livewire\PresentationsController;
+use App\Http\Livewire\CreateBranchController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +30,5 @@ Route::get('categories', CategoriesController::class);
 Route::get('subcategories', SubCategoriesController::class);
 Route::get('products', ProductsController::class);
 Route::get('presentation', PresentationsController::class);
+Route::get('create-branch', CreateBranchController::class);
+Route::get('edit-branch/{idBranch}', [CreateBranchController::class, 'edit']);

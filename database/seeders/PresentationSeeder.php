@@ -15,7 +15,7 @@ class PresentationSeeder extends Seeder
     public function run()
     {
         Presentation::create([
-            'name'=>'Anpoya',
+            'name'=>'Ampolla',
             'description'=>'bebible 30ml'
         ]);
         Presentation::create([
@@ -34,5 +34,9 @@ class PresentationSeeder extends Seeder
             'name'=>'Jarabe 50 ML',
             'description'=>'Jarabe de 50ML'
         ]);
+        Presentation::create([
+          'name'=>'Perladp',
+          'description'=>'Jarabe de 50ML'
+      ]);
     }
 }
