@@ -1,5 +1,5 @@
 <div>
-  <div class="account-settings-container layout-top-spacing">
+  <div class="account-settings-container layout-top-spacing" wire:ignore.self>
     <div class="account-content">
       <div class="scrollspy-example" data-spy="scroll" data-target="#account-settings-scroll" data-offset="-100">
         <div class="row">
@@ -12,8 +12,11 @@
                     <div class="row">
                       <div class="col-xl-2 col-lg-12 col-md-4">
                         <div class="upload mt-4 pr-md-4">
-                          <input type="file" id="input-file-max-fs" class="dropify" data-default-file="assets/img/user-profile.jpeg" data-max-file-size="2M" />
-                          <p class="mt-2"><i class="flaticon-cloud-upload mr-1"></i>Subir Imagen</p>
+                          @if ($image)
+                           <img style="height: 150; width: 150px;" src="{{$image->temporaryUrl()}}"
+                               class="img img-responsive mb-2">
+                           @endif
+                          <input type="file" class="form-control-file" data-max-file-size="2M" wire:model="image"/>
                         </div>
                       </div>
                       <div class="col-xl-10 col-lg-12 col-md-8 mt-md-0 mt-4">
@@ -23,18 +26,21 @@
                               <div class="form-group">
                                 <label for="fullName">Nombre de la Sucursal</label>
                                 <input wire:model.lazy="nameShop" type="text" class="form-control mb-4" placeholder="Ejemplo: Sucursal Ciudad Toledo">
+                                  @error('nameShop') <span class="text-danger er">{{ $message }}</span> @enderror
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-group">
-                                <label for="fullName">Telefono de la Sucursal</label>
-                                <input wire:model.lazy="phoneShop" type="text" class="form-control mb-4" placeholder="Ejemplo: 2667-3030">
+                                <label for="telefono">Telefono de la Sucursal</label>
+                                <input wire:model.lazy="phoneShop" type="number" class="form-control mb-4" placeholder="Ejemplo: 2667-3030">
+                                  @error('phoneShop') <span class="text-danger er">{{ $message }}</span> @enderror
                               </div>
                             </div>
                           </div>
                           <div class="form-group">
-                            <label for="profession">Direccion</label>
+                            <label for="direccion">Direccion</label>
                             <input wire:model.lazy="addressShop" type="text" class="form-control mb-4" placeholder="Ejemplo: Ciudad Toledo San Miguel">
+                              @error('addressShop') <span class="text-danger er">{{ $message }}</span> @enderror
                           </div>
                         </div>
                       </div>
@@ -49,12 +55,23 @@
     </div>
     <div class="account-settings-footer">
       <div class="as-footer-container">
-        <button id="multiple-reset" class="btn btn-warning">limpiar</button>
+        <button id="multiple-reset" wire:click.prevent="resetUI()" class="btn btn-warning"><i class="fas fa-snowplow"></i> limpiar</button>
         <div class="blockui-growl-message">
           <i class="flaticon-double-check"></i>&nbsp; Settings Saved Successfully
         </div>
-        <button id="multiple-messages" class="btn btn-primary">Guardar</button>
+        <button id="multiple-messages" wire:click.prevent="Store()" class="btn btn-primary"><i class="far fa-save"></i> Guardar</button>
       </div>
     </div>
   </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+    window.livewire.on('Sucursal-creada', msg=>{
+      swal({
+             title: 'Sucursal Creada con Exito!',
+             text: msg,
+             type: 'success',
+         })
+    });
+});
+</script>

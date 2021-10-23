@@ -15,11 +15,11 @@ class CreateShopsTable extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
-            $table->string('nameShop',30);
+            $table->string('nameShop',30)->unique();
             $table->string('addressShop',150);
             $table->integer('phoneShop');
             $table->string('codeShop')->unique();
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
