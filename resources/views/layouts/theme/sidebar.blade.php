@@ -45,13 +45,13 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
                     </li>
 
-                    <li class="menu">
-                        <a href="#components" data-active="false" class="menu-toggle">
+                    <li class="menu menu-single">
+                        <a href="{{ url('/facturacion')}}" data-active="false" class="menu-toggle">
                             <div class="base-menu">
                                 <div class="base-icons">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                                 </div>
-                                <span>Ventas</span>
+                                <span>Facturación</span>
                             </div>
                         </a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
@@ -192,10 +192,7 @@
                             <a href="{{ url('/presentation')}}"> Presentaciones </a>
                         </li>
                         <li>
-                            <a href="{{ url('/products')}}"> Productos </a>
-                        </li>
-                         <li>
-                            <a href="#"> Inventario </a>
+                            <a href="{{ url('/products')}}"> Inventario </a>
                         </li>
                            <li>
                             <a href="#"> Compras </a>
@@ -203,58 +200,7 @@
                     </ul>
                 </div>
 
-                <div class="submenu" id="components">
-                    <ul class="submenu-list" data-parent-element="#components">
-                        <li>
-                            <a href="component_tabs.html">Tabs </a>
-                        </li>
-                        <li>
-                            <a href="component_accordion.html">Accordions  </a>
-                        </li>
-                        <li>
-                            <a href="component_modal.html">Modals </a>
-                        </li>
-                        <li>
-                            <a href="component_cards.html">Cards </a>
-                        </li>
-                        <li>
-                            <a href="component_bootstrap_carousel.html">Carousel</a>
-                        </li>
-                        <li>
-                            <a href="component_blockui.html">Block UI </a>
-                        </li>
-                        <li>
-                            <a href="component_countdown.html">Countdown </a>
-                        </li>
-                        <li>
-                            <a href="component_counter.html">Counter </a>
-                        </li>
-                        <li>
-                            <a href="component_sweetalert.html">Sweet Alerts </a>
-                        </li>
-                        <li>
-                            <a href="component_timeline.html">Timeline </a>
-                        </li>
-                        <li>
-                            <a href="component_snackbar.html">Notifications </a>
-                        </li>
-                        <li>
-                            <a href="component_session_timeout.html">Session Timeout </a>
-                        </li>
-                        <li>
-                            <a href="component_media_object.html">Media Object </a>
-                        </li>
-                        <li>
-                            <a href="component_list_group.html">List Group </a>
-                        </li>
-                        <li>
-                            <a href="component_pricing_table.html">Pricing Tables </a>
-                        </li>
-                        <li>
-                            <a href="component_lightbox.html">Lightbox </a>
-                        </li>
-                    </ul>
-                </div>
+                
 
                 <div class="submenu" id="forms">
                     <ul class="submenu-list" data-parent-element="#forms">

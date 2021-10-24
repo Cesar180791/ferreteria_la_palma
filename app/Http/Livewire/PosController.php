@@ -8,6 +8,7 @@ class PosController extends Component
 {
     public function render()
     {
-        return view('livewire.pos.pos');
+        return view('livewire.pos.pos')->extends('layouts.theme.app')
+        ->section('content');
     }
 }
