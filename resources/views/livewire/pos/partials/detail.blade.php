@@ -2,6 +2,7 @@
 	<div class="connect-sorting-content">
 		<div class="card simple-title-task ui-sortable-handle">
 			<div class="card-body">
+				<h6>Detalle</h6>
 				@if($total > 0)
 				<div class="table-responsive tblscroll" style="max-height: 650px; overflow: hidden;">
 					<table class="table table-bordered table-striped mt-1">

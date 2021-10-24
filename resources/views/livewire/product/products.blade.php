@@ -19,7 +19,6 @@
                             <tr>
                                 <th class="table-th text-white text-center"><small>ID</small></th>
                                 <th class="table-th text-white"><small>Producto</small></th>
-                                <th class="table-th text-white text-center"><small>Presentacion</small></th>
                                 <th class="table-th text-white text-center"><small>Costo Final</small></th>
                                 <th class="table-th text-white text-center"><small>Precio Final</small></th>
                                 <th class="table-th text-white text-center"><small>cant Stock</small></th>
@@ -32,7 +31,6 @@
                             <tr>
                                 <td><p class="text-center">{{$product-> id}}</p></td>
                                 <td><p class="text-center">{{$product-> name}}</p></td>
-                                <td><p class="text-center">{{$product-> presentation}}</p></td>
                                 <td><p class="text-center">${{$product-> costIVA}}</p></td>
                                 <td><p class="text-center">${{$product-> priceIVA}}</p></td>
                                 <td><p class="text-center">{{$product-> quantity}}</p></td>

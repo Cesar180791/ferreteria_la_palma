@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\Category;
 use Illuminate\Support\Facades\Storage; //facade para manipular imagenes en laravel
 use Livewire\withFileUploads; // trait para subir imagenes
-use Livewire\withPagination; //trait paginacion
+use Livewire\withPagination; //trait paginacion 
 
 
 class CategoriesController extends Component

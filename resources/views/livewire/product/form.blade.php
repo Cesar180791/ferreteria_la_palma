@@ -36,19 +36,6 @@
 		
 	</div>
 
-	<div class="col-sm-12 col-md-6 mt-3">
-		<label>Seleccione una Presentación</label>
-		<div class="form-group">
-			<select wire:model='presentationId' class="form-control">
-				<option value="Seleccionar" disabled>Seleccionar</option>
-				@foreach($presentations as $presentation)
-				<option value="{{$presentation->id}}">{{$presentation->name}}</option>
-				@endforeach
-			</select>
-			@error('presentationId') <span class="text-danger er">{{ $message }}</span> @enderror
-		</div>
-	</div>
-
 		<div class="col-sm-12 col-md-6 mt-3">
 		<label>Seleccione Sub-Categoría</label>
 		<div class="form-group">

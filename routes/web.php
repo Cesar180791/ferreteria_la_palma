@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\CategoriesController;
 use App\Http\Livewire\SubCategoriesController;
 use App\Http\Livewire\ProductsController;
-use App\Http\Livewire\PresentationsController;
 use App\Http\Livewire\CreateBranchController;
 use App\Http\Livewire\CoinsController; 
 use App\Http\Livewire\PosController;
@@ -32,7 +31,6 @@ Route::get('categories', CategoriesController::class);
 Route::get('subcategories', SubCategoriesController::class);
 Route::get('products', ProductsController::class);
 Route::get('dinero', CoinsController::class);
-Route::get('presentation', PresentationsController::class);
 Route::get('facturacion', PosController::class);
 
 

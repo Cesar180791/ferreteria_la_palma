@@ -24,7 +24,6 @@ class CreateProductsTable extends Migration
             $table->decimal('IVAprice',10,4)->default(0);
             $table->decimal('priceIVA',10,4)->default(0);
             $table->integer('quantity')->default(0);
-            $table->foreignId('presentation_id')->constrained();
             $table->foreignId('sub_category_id')->constrained();
             
             $table->timestamps();
