@@ -3,12 +3,14 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Denomination;
 
 class PosController extends Component
 {
+    public $total=10, $itemsQuantity=1, $cart=[], $denominations=[], $efectivo, $change;
     public function render()
     {
-        return view('livewire.pos.pos')->extends('layouts.theme.app')
-        ->section('content');
+        $this->denominations = Denomination::all();
+        return view('livewire.pos.pos')->extends('layouts.theme.app')->section('content');
     }
 }

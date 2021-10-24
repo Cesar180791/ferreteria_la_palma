@@ -22,14 +22,7 @@
 
  <script src="{{ asset('plugins/sweetalerts/sweetalert2.min.js') }}"></script>
  <script src="{{ asset('plugins/notification/snackbar/snackbar.min.js') }}"></script>
-  <script src="{{ asset('plugins/currency/currency.min.js') }}"></script>
-
-<!-- Inicio de Link para agregar tienda> -->
-  <script src="{{ asset('plugins/dropify/dropify.min.js') }}"></script>
-  <script src="{{ asset('plugins/blockui/jquery.blockUI.min.js') }}"></script>
-  <!-- <script src="plugins/tagInput/tags-input.js"></script> -->
-  <script src="{{ asset('assets/js/users/account-settings.js') }}"></script>
-  <!-- Fin de Link para agregar tienda> -->
+ <script src="{{ asset('plugins/currency/currency.min.js') }}"></script>
 
 
  <script>
