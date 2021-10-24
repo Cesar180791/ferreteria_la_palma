@@ -16,22 +16,22 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::create([
-            'name'=>'MEDICAMENTOS DE VENTA LIBRE',
-            'description' => 'Medicamentos que se pueden vender a todo el publico',
+            'name'=>'Fontaneria',
+            'description' => 'venta de productos para fontaneria',
             'image'=>'https://dummyimage.com/600x400/000/fff'
         ]);
         Category::create([
-            'name'=>'MEDICAMENTOS CONTROLADOS',
-            'description' => 'Medicamentos que se pueden vender solo con receta medica',
+            'name'=>'Construccion',
+            'description' => 'Materiales diversos para construccion',
             'image'=>'https://dummyimage.com/600x400/000/fff'
         ]);
         Category::create([
-            'name'=>'EQUIPO MEDICO',
-            'description' => 'Venta de insumos medicos',
+            'name'=>'Agronomia',
+            'description' => 'Venta de hierbicidas y productos pra el cuidado de las cosechas',
             'image'=>'https://dummyimage.com/600x400/000/fff'
         ]);
         Category::create([
-            'name'=>'TIENDA DE CONVENIENCIA',
+            'name'=>'Herramientas',
             'description'=>'Venta de productos de miselaneos',
             'image'=>'https://dummyimage.com/600x400/000/fff'
         ]);

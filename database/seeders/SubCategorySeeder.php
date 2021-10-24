@@ -15,43 +15,23 @@ class SubCategorySeeder extends Seeder
     public function run()
     {
         SubCategory::create([
-            'name'=>'Antigripales',
-            'description' => 'Medicamentos para la Gripe que se pueden vender a todo el publico',
+            'name'=>'PVC',
+            'description' => 'materiales hechos de pvc de diferentes medidas',
             'category_id'=>1
         ]);
         SubCategory::create([
-            'name'=>'Anticonceptivos',
-            'description' => 'Medicamentos para palinificacion que se pueden vender a todo el publico',
-            'category_id'=>1
-        ]);
-        SubCategory::create([
-            'name'=>'Vitaminico',
-            'description' => 'Medicamentos para fortalecer el sistema inmunologico que se pueden vender a todo el publico',
-            'category_id'=>1
-        ]);
-        SubCategory::create([
-            'name'=>'Antibioticos',
-            'description' => 'Medicamentos para la infecciones que se pueden vender solo con receta',
+            'name'=>'Hierro',
+            'description' => 'Venta de hierro para construccion',
             'category_id'=>2
         ]);
         SubCategory::create([
-            'name'=>'Calmantes',
-            'description' => 'Medicamentos para los Nervios que se pueden vender solo con receta',
-            'category_id'=>2
-        ]);
-        SubCategory::create([
-            'name'=>'Anestecios',
-            'description' => 'Medicamentos para el dolor que se pueden vender solo con receta',
-            'category_id'=>2
-        ]);
-        SubCategory::create([
-            'name'=>'Equipo de Proteccion Virica',
-            'description' => 'equipo para la prevencion de enfermedades viricas',
+            'name'=>'Hierbicidas',
+            'description' => 'venta de hierbicidas para el cuidado de los cultivos ',
             'category_id'=>3
         ]);
         SubCategory::create([
-            'name'=>'Bebidas Carbonatadas',
-            'description' => 'Bebidas Carbonatadas para calmar la sed',
+            'name'=>'Herramientas del hogar',
+            'description' => 'Venta de herramientas varias',
             'category_id'=>4
         ]);
     }

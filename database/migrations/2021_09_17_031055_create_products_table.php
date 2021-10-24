@@ -16,14 +16,16 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name',255);
-            $table->string('barCode',25)->nullable();
-            $table->decimal('cost',10,2)->default(0);
-            $table->decimal('price',10,2)->default(0);
+            $table->string('barCode',25)->nullable(); 
+            $table->decimal('cost',10,4)->default(0);
+            $table->decimal('IVACost',10,4)->default(0);
+            $table->decimal('costIVA',10,4)->default(0);
+            $table->decimal('price',10,4)->default(0);
+            $table->decimal('IVAprice',10,4)->default(0);
+            $table->decimal('priceIVA',10,4)->default(0);
+            $table->integer('quantity')->default(0);
             $table->foreignId('presentation_id')->constrained();
-            //creacion de llave foranea
-           // $table->unsignedBigInteger('sub_category_id');
-           // $table->foreign('sub_category_id')->references('id')->on('sub_categories'); 
-           $table->foreignId('sub_category_id')->constrained();
+            $table->foreignId('sub_category_id')->constrained();
             
             $table->timestamps();
         });

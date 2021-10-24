@@ -13,7 +13,7 @@ class SubCategoriesController extends Component
 
     public $name,$description,$search,$selected_id,$pageTitle,$componentName,$categoryid;
     private $pagination = 5;
-
+ 
      public function mount(){
         $this->pageTitle = 'Listado';
         $this->componentName = 'Sub-Categorías';

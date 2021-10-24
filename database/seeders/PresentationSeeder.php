@@ -15,28 +15,20 @@ class PresentationSeeder extends Seeder
     public function run()
     {
         Presentation::create([
-            'name'=>'Ampolla',
-            'description'=>'bebible 30ml'
-        ]);
-        Presentation::create([
-            'name'=>'Pastilla 500 MG',
-            'description'=>'pastilla 500mg'
-        ]);
-        Presentation::create([
-            'name'=>'pastilla 100 MG',
-            'description'=>'pastilla de 100mg'
+            'name'=>'PVC de 1/2"',
+            'description'=>'PVC de 1/2"'
         ]);
          Presentation::create([
-            'name'=>'Jarabe 100 Ml',
-            'description'=>'Jarabe 100 Ml'
+            'name'=>'PVC de 1"',
+            'description'=>'PVC de 1"'
         ]);
           Presentation::create([
-            'name'=>'Jarabe 50 ML',
-            'description'=>'Jarabe de 50ML'
+            'name'=>'PVC de 2"',
+            'description'=>'PVC de 2"'
         ]);
-        Presentation::create([
-          'name'=>'Perladp',
-          'description'=>'Jarabe de 50ML'
-      ]);
+          Presentation::create([
+            'name'=>'PVC de 4"',
+            'description'=>'PVC de 4"'
+        ]);
     }
 }

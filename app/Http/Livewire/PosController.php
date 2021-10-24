@@ -4,10 +4,10 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class StockController extends Component
+class PosController extends Component
 {
     public function render()
     {
-        return view('livewire.stock.stock');
+        return view('livewire.pos.pos');
     }
 }

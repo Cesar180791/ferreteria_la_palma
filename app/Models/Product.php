@@ -4,16 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+ 
 class Product extends Model
 {
     use HasFactory;
-
+ 
     protected $fillable =[
         'name',
         'barCode',
         'cost',
+        'costIVA',
         'price',
+        'IVAprice',
+        'priceIVA',
         'presentation_id',
         'sub_category_id'
     ];

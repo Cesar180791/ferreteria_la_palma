@@ -14,36 +14,6 @@
 		</div>
 		@error('name') <span class="text-danger er">{{ $message }}</span> @enderror
 	</div>
-
-	<div class="col-sm-12 col-md-12 mt-3">
-		<label>Código de Barras </label>
-		<div class="input-group">
-			<div class="input-group-prepend">
-				<span class="input-group-text">
-					<span class="fas fa-edit">
-
-					</span>
-				</span>
-			</div>
-			<input type="text" wire:model.lazy="barCode" class="form-control" placeholder="Ingrese el Código de barras">
-		</div>
-		@error('barCode') <span class="text-danger er">{{ $message }}</span> @enderror
-	</div>
-	<div class="col-sm-12 col-md-6 mt-3">
-		<label>Precio Costo </label>
-		<div class="input-group">
-			<div class="input-group-prepend">
-				<span class="input-group-text">
-					<span class="fas fa-edit">
-
-					</span>
-				</span>
-			</div>
-			<input type="text" data-type='currency' wire:model.lazy="cost" class="form-control" placeholder="Ingrese el precio costo">
-		</div>
-		@error('cost') <span class="text-danger er">{{ $message }}</span> @enderror
-	</div>
-
 	<div class="col-sm-12 col-md-6 mt-3">
 		<label>Precio Venta </label>
 		<div class="input-group">
@@ -54,9 +24,16 @@
 					</span>
 				</span>
 			</div>
-			<input type="text" data-type='currency' wire:model.lazy="price" class="form-control" placeholder="Ingrese el precio de venta">
+			<input type="number" data-type='currency' wire:model="price" class="form-control" placeholder="Ingrese el precio de venta">
 		</div>
 		@error('price') <span class="text-danger er">{{ $message }}</span> @enderror
+	</div>
+		<div class="col-sm-12 col-md-6 mt-3">
+		<label>Precio Venta mas IVA </label>
+		<div class="input-group">
+			<br><label for="Precio-IVA">${{$priceIVA}}</label>
+		</div>
+		
 	</div>
 
 	<div class="col-sm-12 col-md-6 mt-3">

@@ -5,7 +5,7 @@
                 <h4 class="card-title">
                     <b style="font-size: 18px;">{{$componentName}} | {{$pageTitle}}</b>
                 </h4>
-                <ul class="tabs tab-pills">
+                <ul class="tabs tab-pills"> 
                     <li style="list-style: none;">
                         <a href="javascript:void(0)" class="tabmenu btn bg-dark" data-toggle="modal" data-target="#theModal">Agregar</a>
                     </li>
@@ -82,7 +82,7 @@
                  text: 'No se puede eliminar la Sub-Categoría por que tiene Productos asignados'})
             return;
         }
-        swal({
+        swal({ 
             title: 'Confirmar',
             text: '¿Confirmas eliminar el registro?',
             type: 'warning',
