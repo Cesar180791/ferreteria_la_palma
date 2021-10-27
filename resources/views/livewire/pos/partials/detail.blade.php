@@ -1,4 +1,5 @@
 <div class="connect-sorting">
+	<button class="btn btn-primary mbmobile mb-2" id="buscarbtn" wire:click.prevent="resetUI()">Buscar F1</button>
 	<div class="connect-sorting-content">
 		<div class="card simple-title-task ui-sortable-handle">
 			<div class="card-body">
@@ -10,7 +11,7 @@
 							<tr>
 								<th class="table-th text-left text-white"><small>Producto</small></th>
 								<th class="table-th text-left text-white"><small>Precio</small></th>
-								<th width="10%" class="table-th text-left text-white"><small>Cant</small></th>
+								<th width="20%" class="table-th text-left text-white"><small>Cant</small></th>
 								<th class="table-th text-left text-white"><small>Importe</small></th>
 								<th class="table-th text-left text-white"><small>Acciones</small></th>
 							</tr>
@@ -18,8 +19,8 @@
 						<tbody>
 							@foreach($cart as $item)
 							<tr>
-								<td><small>{{$item->name}}</small></td>
-								<td><small>${{number_format($item->price,2)}}</small></td>
+								<td><h6>{{$item->name}}</h6></td>
+								<td><h6>${{number_format($item->price,2)}}</h6></td>
 								<td>
 									<input type="number" id="r{{$item->id}}" 
 									wire:change="updateQty({{$item->id}}, $('#r'+ {{$item->id}}).val() )"
@@ -28,22 +29,22 @@
 									>
 								</td>
 								<td class="text-center">
-									<small>
+									<h6>
 										${{number_format($item->price * $item->quantity,2)}}
-									</small>
+									</h6>
 								</td>
 								<td class="text-center">
 									<button onclick="Confirm('{{$item->id}}', 'removeItem', '¿Eliminar el Producto?')" 
 									class="btn btn-danger btn-sm mbmobile">
 										<i class="fas fa-trash-alt"></i>
 									</button>
-									<button wire.click.prevent="decreaseQty({{$item->id}})"
-									class="btn btn-danger btn-sm">
-										<i class="fas fa-trash-alt"></i>
+									<button wire:click.prevent="decreaseQty({{$item->id}})"
+									class="btn btn-success btn-sm">
+										<i class="fas fa-minus"></i>
 									</button>
-									<button wire.click.prevent="increaseQty({{$item->id}})"
-									class="btn btn-danger btn-sm">
-										<i class="fas fa-trash-alt"></i>
+									<button wire:click.prevent="increaseQty({{$item->id}})"
+									class="btn btn-success btn-sm">
+										<i class="fas fa-plus"></i>
 									</button>
 								</td>
 							</tr>
@@ -52,10 +53,10 @@
 					</table>
 				</div>
 				@else
-				<small class="text-center text-muted">Agrega Productos al Carrito</small>
+				<h6 class="text-center text-muted">Agrega Productos al Detalle</h6>
 				@endif
 				<div wire:loading.inline wire:target="saveSale">
-					<small class="text-danger text-center">Guardando venta...</small>
+					<h6 class="text-danger text-center">Guardando venta...</h6>
 				</div>
 			</div>
 		</div>

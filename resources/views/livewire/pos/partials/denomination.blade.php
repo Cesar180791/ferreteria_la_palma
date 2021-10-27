@@ -18,10 +18,11 @@
 					<div class="card-body">
 						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
-								<span class="input-group-text input-gp hideonsm" style="background: #3B3F5C; color: white;">Efec F8
+								<span class="input-group-text input-gp hideonsm" style="background: #3B3F5C; color: white;">Efec F3
 								</span>
 							</div>
-							<input type="number" id="cash" wire:model="efectivo" wire.keydown.enter="saveSale" class="form-control text-center" value="{{$efectivo}}">
+							<input type="number" id="cash" wire:model="efectivo"
+							wire:keydown.enter="saveSale" class="form-control text-center" value="{{$efectivo}}">
 							<div class="input-group-append">
 								<span wire:click="$set('efectivo', 0)" class="input-group-text" style="background: #3B3F5C; color:white">
 									<i class="fas fa-backspace"></i>
@@ -32,8 +33,8 @@
 						<div class="row justify-content-between mt-3">
 							<div class="col-sm-12 col-md-12 col-lg-6">
 								@if($total > 0)
-								<button onclick="Confirm('','cleanCart','¿Eliminar el detalle?')" class="btn btn-dark mtmobile btn-sm">
-									CANCELAR F4
+								<button onclick="Confirm('','clearCart','¿Seguro de eliminar el detalle de venta?')" class="btn btn-dark mtmobile btn-sm">
+									CANCELAR F2
 								</button>
 								@endif
 							</div>

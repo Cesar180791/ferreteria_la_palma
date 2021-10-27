@@ -7,6 +7,8 @@ use App\Http\Livewire\ProductsController;
 use App\Http\Livewire\CreateBranchController;
 use App\Http\Livewire\CoinsController; 
 use App\Http\Livewire\PosController;
+use App\Http\Livewire\ProveedoresController;
+use App\Http\Livewire\ComprasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +34,9 @@ Route::get('subcategories', SubCategoriesController::class);
 Route::get('products', ProductsController::class);
 Route::get('dinero', CoinsController::class);
 Route::get('facturacion', PosController::class);
+Route::get('proveedores', ProveedoresController::class);
+Route::get('compras', ComprasController::class);
+
+
 
 

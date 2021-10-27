@@ -195,6 +195,9 @@
                             <a href="{{ url('/products')}}"> Inventario </a>
                         </li>
                            <li>
+                            <a href="#"> proveedores </a>
+                        </li>
+                        <li>
                             <a href="#"> Compras </a>
                         </li>
                     </ul>

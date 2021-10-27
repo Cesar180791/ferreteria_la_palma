@@ -20,8 +20,8 @@ class CreatePurchasesTable extends Migration
             $table->string('lote',25)->unique();
             $table->string('descripcion_lote',150);
             $table->string('factura');
-            $table->date('vencimiento');
             $table->foreignId('users_id')->constrained();
+            $table->foreignId('proveedores_id')->constrained(); //categories
             $table->timestamps();
         });
     }
