@@ -20,13 +20,6 @@
              type: 'warning',
          })
         });
-        window.livewire.on('no-stock', msg=>{
-            swal({
-             title: 'Error',
-             text: msg,
-             type: 'warning',
-         })
-        });
         window.livewire.on('add-ok', msg=>{
             swal({
              title: 'Exito',
@@ -34,14 +27,14 @@
              type: 'success',
          })
         });
-         window.livewire.on('sale-error', msg=>{
+         window.livewire.on('purchase-error', msg=>{
             swal({
              title: 'Error',
              text: msg,
              type: 'warning',
          })
         });
-          window.livewire.on('sale-ok', msg=>{
+          window.livewire.on('purchase-ok', msg=>{
             swal({
              title: 'Exito',
              text: msg,

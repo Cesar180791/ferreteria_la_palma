@@ -4,7 +4,7 @@
 		<div class="card simple-title-task ui-sortable-handle">
 			<div class="card-body">
 				<h6>Productos</h6>
-				 @include('livewire.pos.partials.searchBox')
+				 @include('livewire.pos.partials.searchbox')
 				<div class="table-responsive tblscroll" style="max-height: 650px; overflow: hidden;">
 					<table class="table table-bordered table-striped mt-1">
 						<thead class="text-white" style="background: #3B3F5C">

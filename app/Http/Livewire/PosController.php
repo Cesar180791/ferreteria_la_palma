@@ -117,7 +117,7 @@ class PosController extends Component
 
         if($exist){
 
-            if ($product->quantity < ($cant + $exist->quantity)) {
+            if ($product->quantity < ($cant + $exist->quantity)) { 
                 $this->emit('no-stock', 'Stock insuficiente');
                 return;
             }

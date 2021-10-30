@@ -11,8 +11,14 @@ class PurchaseDetail extends Model
 
     protected $fillable =[
         'purchases_id',
-        'products_id',
+        'product_id',
         'cost',
+        'IVACost',
+        'costIVA',
+        'price',
+        'IVAprice',
+        'priceIVA',
         'quantity',
+        'totalPurchase'
     ];
 }

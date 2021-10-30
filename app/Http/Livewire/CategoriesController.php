@@ -5,14 +5,14 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Category;
 use Illuminate\Support\Facades\Storage; //facade para manipular imagenes en laravel
-use Livewire\withFileUploads; // trait para subir imagenes
-use Livewire\withPagination; //trait paginacion 
+use Livewire\WithFileUploads; // trait para subir imagenes
+use Livewire\WithPagination; //trait paginacion 
 
 
 class CategoriesController extends Component
 { 
     use withFileUploads;
-    use withPagination;
+    use WithPagination;
 
     public $name, $description, $image, $search, $selected_id, $pageTitle, $componentName;
     private $pagination = 5;

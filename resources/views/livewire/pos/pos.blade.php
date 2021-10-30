@@ -5,11 +5,11 @@
              <!--busqueda de productos-->
            @include('livewire.pos.partials.search')
        </div>
-       <div class="col-sm-12 col-md-9" id="detalle" wire:ignore.self>
+       <div class="col-sm-12 col-md-8" id="detalle" wire:ignore.self>
              <!--Detalle de productos-->
            @include('livewire.pos.partials.detail')
        </div>
-       <div class="col-sm-12 col-md-3" id="facturacion" wire:ignore.self>
+       <div class="col-sm-12 col-md-4" id="facturacion" wire:ignore.self>
             <!--total-->
            @include('livewire.pos.partials.total')
 

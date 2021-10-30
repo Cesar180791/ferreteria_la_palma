@@ -6,7 +6,7 @@
 				<div class="row">
 					@foreach($denominations as $d)
 					<div class="col-sm mt-2">
-						<button wire:click.prevent="Acash({{$d->value}})" class="btn btn-success btn-sm btn-block den">
+						<button wire:click.prevent="Acash({{$d->value}})" class="btn btn-success btn-block den">
 							{{ $d->value > 0 ? '$'. number_format($d->value,2, '.','') : 'Exacto' }}
 						</button>
 					</div>
@@ -40,7 +40,7 @@
 							</div>
 							<div class="col-sm-12 col-md-12 col-lg-6">
 								@if($efectivo >= $total && $total > 0)
-								<button wire:click.prevent="saveSale" class="btn btn-dark btn-sm btn-block">
+								<button wire:click.prevent="saveSale" class="btn btn-dark btn-block">
 									GUARDAR F9
 								</button>
 								@endif
