@@ -22,8 +22,8 @@ class CreateSalesTable extends Migration
             $table->decimal('change',10,2);
             $table->enum('status',['PAID','PENDING','CANCELLED'])->default('PAID');
 
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('users_id');
+            $table->foreign('users_id')->references('id')->on('users');
 
             $table->timestamps();
         });

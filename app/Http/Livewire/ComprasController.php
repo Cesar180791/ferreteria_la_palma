@@ -275,7 +275,7 @@ class ComprasController extends Component
                 'total' => $this->total,
                 'item' => $this->itemsQuantity,
                 'factura' => $this->factura,
-                'user_id' => auth()->user()->id,
+                'users_id' => auth()->user()->id,
                 'proveedores_id' => $this->proveedor
             ]);
             if ($purchase) {

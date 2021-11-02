@@ -12,7 +12,7 @@ class Purchase extends Model
         'total',
         'item',
         'factura',
-        'user_id',
+        'users_id',
         'proveedores_id'
 
     ];

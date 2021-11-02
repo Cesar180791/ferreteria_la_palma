@@ -18,7 +18,7 @@ class CreatePurchasesTable extends Migration
             $table->decimal('total',10,2);
             $table->integer('item');
             $table->string('factura');
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('users_id')->constrained();
             $table->foreignId('proveedores_id')->constrained(); //categories
             $table->timestamps();
         });

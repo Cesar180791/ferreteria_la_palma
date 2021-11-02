@@ -15,6 +15,6 @@ class Sale extends Model
         'cash',
         'change',
         'status',
-        'user_id'
+        'users_id'
     ];
 }

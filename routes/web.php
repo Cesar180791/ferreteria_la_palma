@@ -9,6 +9,12 @@ use App\Http\Livewire\CoinsController;
 use App\Http\Livewire\PosController;
 use App\Http\Livewire\ProveedoresController;
 use App\Http\Livewire\ComprasController;
+use App\Http\Livewire\RolesController;
+use App\Http\Livewire\PermisosController;
+use App\Http\Livewire\AsignarController;
+use App\Http\Livewire\UserController;
+use App\Http\Livewire\CashoutController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,13 +35,31 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('categories', CategoriesController::class);
-Route::get('subcategories', SubCategoriesController::class);
-Route::get('products', ProductsController::class);
-Route::get('dinero', CoinsController::class);
-Route::get('facturacion', PosController::class);
-Route::get('proveedores', ProveedoresController::class);
-Route::get('compras', ComprasController::class);
+Route::middleware(['auth'])->group(function (){
+Route::group(['middleware' => ['role:Administrador']], function () {
+    Route::get('categories', CategoriesController::class);
+    Route::get('subcategories', SubCategoriesController::class);
+    Route::get('products', ProductsController::class);
+    Route::get('dinero', CoinsController::class);
+    Route::get('proveedores', ProveedoresController::class);
+    Route::get('compras', ComprasController::class);
+    Route::get('permisos', PermisosController::class);
+    Route::get('asignar', AsignarController::class);
+    Route::get('usuarios', UserController::class);
+    Route::get('roles', RolesController::class);
+    Route::get('corte-caja', CashoutController::class);
+   
+
+});
+Route::group(['middleware' => ['role:Cajero']], function () {
+    Route::get('facturacion', PosController::class);
+});
+
+});
+
+
+
+
 
 
 

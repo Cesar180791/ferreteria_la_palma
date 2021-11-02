@@ -30,11 +30,11 @@
 		@error('description') <span class="text-danger er">{{ $message }}</span> @enderror
 	</div>
 
-	<div class="col-sm-12 mt-3">
+	<div class="col-sm-12 mt-3" wire:ignore>
 		<label>Seleccione Categoría</label>
 		<div class="form-group">
-			<select wire:model='categoryid' class="form-control">
-				<option value="Seleccionar" disabled>Seleccionar</option>
+			<select wire:model='categoryid' class="form-control"> 
+				<option value="Seleccionar">Seleccionar</option>
 				@foreach($categories as $category)
 				<option value="{{$category->id}}">{{$category->name}}</option>
 				@endforeach
@@ -44,3 +44,4 @@
 	</div>
 </div>
 @include('common.modalFooter')
+
