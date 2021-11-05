@@ -39,13 +39,13 @@
                                     <h6>Fecha hasta</h6>
                                     <div class="form-group">
                                         <input type="text" wire:model="dateTo" class="form-control flatpickr" placeholder="Click para seleccionar">
-                                    </div>
+                                    </div> 
                                 </div>
                                 <div class="col-sm-12">
                                     <button wire:click="$refresh" class="btn btn-dark btn-block">Consultar</button>
 
                                     <a class="btn btn-dark btn-block {{count($data) < 1 ? 'disabled' : '' }}" 
-                                    href="{{ url('report/pdf' . '/' . $userId . '/' . $reportType . '/' . $dateFrom . '/' . $dateTo) }}" target="_blank">Generar PDF</a>
+                                    href="{{ url('reporte-venta-exportar-pdf' . '/' . $userId . '/' . $reportType . '/' . $dateFrom . '/' . $dateTo) }}" target="_blank">Generar PDF</a>
 
                                     <a class="btn btn-dark btn-block {{count($data) < 1 ? 'disabled' : '' }}" 
                                     href="url('report/excel' . '/' . $userId . '/' . $reportType . '/' . $dateFrom . '/' . $dateTo)" target="_blank">Exportar a Excel</a>

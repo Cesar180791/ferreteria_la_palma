@@ -15,6 +15,7 @@ use App\Http\Livewire\AsignarController;
 use App\Http\Livewire\UserController;
 use App\Http\Livewire\CashoutController;
 use App\Http\Livewire\ReportsController;
+use App\Http\Controllers\ExportController;
 
 
 /*
@@ -37,6 +38,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth'])->group(function (){
+
 Route::group(['middleware' => ['role:Administrador']], function () {
     Route::get('categories', CategoriesController::class);
     Route::get('subcategories', SubCategoriesController::class);
