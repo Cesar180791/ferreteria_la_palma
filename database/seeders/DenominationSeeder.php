@@ -51,10 +51,6 @@ class DenominationSeeder extends Seeder
             'value'=>0.05
         ]);
         Denomination::create([
-            'type'=>'MONEDA',
-            'value'=>0.01
-        ]);
-        Denomination::create([
             'type'=>'OTRO',
             'value'=>0
         ]);

@@ -14,6 +14,7 @@ use App\Http\Livewire\PermisosController;
 use App\Http\Livewire\AsignarController;
 use App\Http\Livewire\UserController;
 use App\Http\Livewire\CashoutController;
+use App\Http\Livewire\ReportsController;
 
 
 /*
@@ -47,11 +48,16 @@ Route::group(['middleware' => ['role:Administrador']], function () {
     Route::get('asignar', AsignarController::class);
     Route::get('usuarios', UserController::class);
     Route::get('roles', RolesController::class);
-    Route::get('corte-caja', CashoutController::class);
+    Route::get('consulta-ventas', CashoutController::class);
+    Route::get('reporte-venta', ReportsController::class);
+    Route::get('reporte-venta-exportar-pdf/{user}/{type}/{f1}/{f2}', [ExportController::class,'reportVentaPDF']);
+    Route::get('reporte-venta-exportar-pdf/{user}/{type}', [ExportController::class,'reportVentaPDF']);
+
+
    
 
 });
-Route::group(['middleware' => ['role:Cajero']], function () {
+Route::group(['middleware' => ['role:Cajero||Administrador']], function () {
     Route::get('facturacion', PosController::class);
 });
 

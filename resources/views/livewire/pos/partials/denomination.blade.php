@@ -22,14 +22,14 @@
 								</span>
 							</div>
 							<input type="number" id="cash" wire:model="efectivo"
-							wire:keydown.enter="saveSale" class="form-control text-center" value="{{$efectivo}}">
+							wire:keydown.enter="saveSale" class="form-control text-center" value="{{number_format($efectivo,2)}}">
 							<div class="input-group-append">
 								<span wire:click="$set('efectivo', 0)" class="input-group-text" style="background: #3B3F5C; color:white">
 									<i class="fas fa-backspace"></i>
 								</span>
 							</div>
 						</div>
-						<p class="text-muted">Cambio: ${{number_format($change,2)}}</p>
+						
 						<div class="row justify-content-between mt-3">
 							<div class="col-sm-12 col-md-12 col-lg-6">
 								@if($total > 0)

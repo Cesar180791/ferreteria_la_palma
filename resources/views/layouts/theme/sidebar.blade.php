@@ -9,18 +9,7 @@
                     </li>
                 </ul>
                 <ul class="menu-categories">
-                    <li class="menu active">
-                        <a href="#dashboard" data-active="true" class="menu-toggle">
-                            <div class="base-menu">
-                                <div class="base-icons">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                                </div>
-                                <span>Inicio</span>
-                            </div>
-                        </a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    </li>
-                     @can('Categorias')
+                 @can('Categorias_Index')
                     <li class="menu">
                         <a href="#app" data-active="false" class="menu-toggle">
                             <div class="base-menu">
@@ -33,7 +22,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
                     </li>
                     @endcan
-
+                    @can('Productos_Index')
                     <li class="menu">
                         <a href="#uiKit" data-active="false" class="menu-toggle">
                             <div class="base-menu">
@@ -45,7 +34,8 @@
                         </a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
                     </li>
-
+                    @endcan
+                    @can('Facturacion_Index')
                     <li class="menu menu-single">
                         <a href="{{ url('/facturacion')}}" data-active="false" class="menu-toggle">
                             <div class="base-menu">
@@ -57,19 +47,21 @@
                         </a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
                     </li>
-
+                    @endcan
+                    @can('Usuarios_Index')
                     <li class="menu menu-single">
-                        <a href="#" data-active="false" class="menu-toggle">
+                        <a href="{{ url('/usuarios')}}" data-active="false" class="menu-toggle">
                             <div class="base-menu">
                                 <div class="base-icons">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-key"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                                 </div>
-                                <span>Roles</span>
+                                <span class="">Usuarios</span>
                             </div>
                         </a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
                     </li>
-
+                    @endcan
+                    @can('Permisos_Index')
                     <li class="menu">
                         <a href="#forms" data-active="false" class="menu-toggle">
                             <div class="base-menu">
@@ -81,57 +73,23 @@
                         </a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
                     </li>
-
-                    <li class="menu">
-                        <a href="#tables" data-active="false" class="menu-toggle">
-                            <div class="base-menu">
-                                <div class="base-icons">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                                </div>
-                                <span>Asignar</span>
-                            </div>
-                        </a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    </li>
-
-                    <li class="menu">
-                        <a href="#more" data-active="false" class="menu-toggle">
-                            <div class="base-menu">
-                                <div class="base-icons">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                </div>
-                                <span class="">Usuarios</span>
-                            </div>
-                        </a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    </li>
-
-                    <li class="menu">
-                        <a href="#more" data-active="false" class="menu-toggle">
-                            <div class="base-menu">
-                                <div class="base-icons">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-disc"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
-                                </div>
-                                <span>Monedas</span>
-                            </div>
-                        </a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    </li>
-
-                    <li class="menu">
-                        <a href="#more" data-active="false" class="menu-toggle">
+                    @endcan
+                    @can('Consulta_Venta_Index')
+                    <li class="menu menu-single">
+                        <a href="{{ url('/consulta-ventas')}}" data-active="false" class="menu-toggle">
                             <div class="base-menu">
                                 <div class="base-icons">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
                                 </div>
-                                <span>Arqueos</span>
+                                <span>Consulta Ventas</span>
                             </div>
                         </a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
                     </li>
-
-                    <li class="menu">
-                        <a href="#more" data-active="false" class="menu-toggle">
+                    @endcan
+                    @can('Reportes_Index')
+                    <li class="menu menu-single">
+                        <a href="{{ url('/reporte-venta')}}" data-active="false" class="menu-toggle">
                             <div class="base-menu">
                                 <div class="base-icons">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -141,23 +99,11 @@
                         </a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
                     </li>
-
-
+                    @endcan
                 </ul>
             </nav>
 
             <div id="compact_submenuSidebar" class="submenu-sidebar">
-
-                <div class="submenu" id="dashboard">
-                    <ul class="submenu-list" data-parent-element="#dashboard">
-                        <li class="active">
-                            <a href="index.html"> Analytics </a>
-                        </li>
-                        <li>
-                            <a href="index2.html"> Sales </a>
-                        </li>
-                    </ul>
-                </div>
 
                 <div class="submenu" id="app">
                     <ul class="submenu-list" data-parent-element="#app">
@@ -166,40 +112,20 @@
                         </li>
                         <li>
                             <a href="{{ url('/subcategories')}}"> Sub Categorías </a>
-                        </li><!--
-                        <li class="sub-submenu">
-                            <a role="menu" class="collapsed" data-toggle="collapse" data-target="#appInvoice" aria-expanded="true"><div>Invoice</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
-                            <ul id="appInvoice" class="collapse show" data-parent="#compact_submenuSidebar">
-                                <li>
-                                    <a href="apps_invoice-list.html"> List </a>
-                                </li>
-                                <li>
-                                    <a href="apps_invoice-preview.html"> Preview </a>
-                                </li>
-                                <li>
-                                    <a href="apps_invoice-add.html"> Add </a>
-                                </li>
-                                <li>
-                                    <a href="apps_invoice-edit.html"> Edit </a>
-                                </li>
-                            </ul>
-                        </li> -->
+                        </li>
                     </ul>
                 </div>
 
                 <div class="submenu" id="uiKit">
                     <ul class="submenu-list" data-parent-element="#uiKit">
                         <li>
-                            <a href="{{ url('/presentation')}}"> Presentaciones </a>
-                        </li>
-                        <li>
                             <a href="{{ url('/products')}}"> Inventario </a>
                         </li>
                            <li>
-                            <a href="#"> proveedores </a>
+                            <a href="{{ url('/proveedores')}}"> proveedores </a>
                         </li>
                         <li>
-                            <a href="#"> Compras </a>
+                            <a href="{{ url('/compras')}}"> Compras </a>
                         </li>
                     </ul>
                 </div>
@@ -209,59 +135,15 @@
                 <div class="submenu" id="forms">
                     <ul class="submenu-list" data-parent-element="#forms">
                         <li>
-                            <a href="form_bootstrap_basic.html">Basic </a>
+                            <a href="{{ url('/roles')}}">Roles</a>
+                        </li>
+                         <li>
+                            <a href="{{ url('/permisos')}}">Permisos</a>
                         </li>
                         <li>
-                            <a href="form_input_group_basic.html">Input Group </a>
+                            <a href="{{ url('/asignar')}}">Asignar</a>
                         </li>
-                        <li>
-                            <a href="form_layouts.html">Layouts </a>
-                        </li>
-                        <li>
-                            <a href="form_validation.html">Validation </a>
-                        </li>
-                        <li>
-                            <a href="form_input_mask.html">Input Mask </a>
-                        </li>
-                        <li>
-                            <a href="form_bootstrap_select.html">Bootstrap Select </a>
-                        </li>
-                        <li>
-                            <a href="form_select2.html">Select2 </a>
-                        </li>
-                        <li>
-                            <a href="form_bootstrap_touchspin.html">TouchSpin </a>
-                        </li>
-                        <li>
-                            <a href="form_maxlength.html">Maxlength </a>
-                        </li>
-                        <li>
-                            <a href="form_checkbox_radio.html">Checkbox &amp; Radio </a>
-                        </li>
-                        <li>
-                            <a href="form_switches.html">Switches </a>
-                        </li>
-                        <li>
-                            <a href="form_wizard.html">Wizards </a>
-                        </li>
-                        <li>
-                            <a href="form_fileupload.html">File Upload </a>
-                        </li>
-                        <li>
-                            <a href="form_quill.html">Quill Editor </a>
-                        </li>
-                        <li>
-                            <a href="form_markdown.html">Markdown Editor </a>
-                        </li>
-                        <li>
-                            <a href="form_date_range_picker.html">Date &amp; Range Picker </a>
-                        </li>
-                        <li>
-                            <a href="form_clipboard.html">Clipboard </a>
-                        </li>
-                        <li>
-                            <a href="form_typeahead.html">Typeahead </a>
-                        </li>
+
                     </ul>
                 </div>
 
