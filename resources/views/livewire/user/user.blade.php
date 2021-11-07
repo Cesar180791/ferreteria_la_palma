@@ -22,7 +22,7 @@
                                 <th class="table-th text-white text-center">Telefono</th>
                                 <th class="table-th text-white text-center">Correo</th>
                                 <th class="table-th text-white text-center">Dui</th>
-                                <th class="table-th text-white text-center">Estado</th>
+                                <!--<th class="table-th text-white text-center">Estado</th>-->
                                 <th class="table-th text-white text-center">Rol</th>
                                 <th class="table-th text-white text-center">Acciones</th>
                             </tr>
@@ -34,14 +34,11 @@
                                 <td class="text-center"><h6>{{$r->phone}}</h6></td>
                                 <td class="text-center"><h6>{{$r->email}}</h6></td>
                                 <td class="text-center"><h6>{{$r->dui}}</h6></td>
-                                <td class="text-center">
+                                <!--<td class="text-center">
                                     <span class="badge {{$r->status == 'Active' ? 'badge-success' : 'badge-danger'}} text-uppercase">{{$r->status}}</span>
-                                </td>
+                                </td>-->
                                 <td><h6 class="text-center">{{$r->profile}}</h6></td>
                                 <td class="text-center">
-                                    <a href="javascript:void(0)" class="btn btn-success mtmobile btn-sm" title="View">
-                                        <i class="far fa-eye"></i>
-                                    </a>
                                       <a href="javascript:void(0)" class="btn btn-dark mtmobile btn-sm" wire:click="Edit({{$r->id}})" title="Edit">
                                         <i class="fas fa-edit"></i>
                                     </a>

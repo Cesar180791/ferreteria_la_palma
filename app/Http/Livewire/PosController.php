@@ -5,10 +5,13 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Denomination;
 use App\Models\Product;
+use App\Models\User;
 use App\Models\Sale;
 use App\Models\SaleDetails;
 use Livewire\WithPagination;
 use Darryldecode\Cart\Facades\CartFacade as Cart; 
+use Barryvdh\DomPDF\Facade as PDF;
+use Carbon\Carbon;
 use DB;
 
 class PosController extends Component
@@ -67,6 +70,7 @@ class PosController extends Component
         'removeItem' => 'removeItem',
         'clearCart' => 'clearCart',
         'saveSale' => 'saveSale',
+        'refrescar'=> '$refresh',
         'reset' => 'resetUI'
     ]; 
 
@@ -237,35 +241,51 @@ class PosController extends Component
                         'sale_id' => $sale->id
                     ]);
 
-                    //inicio actualizar la cantidad de cupones
+                    //inicio actualizar la cantidad de productos
 
                     $product = Product::find($item->id);
                     $product->quantity =  $product->quantity - $item->quantity;
                     $product->save();
-             
 
-                     //Fin  actualizar la cantidad de cupones
+                     //Fin  actualizar la cantidad de producto
                 }
 
             }
-
-
+            //$this->emit('sale-ok','Venta Registrada');
+            //$this->emit('print-ticket',$sale->id);
             DB::commit();
+           
             Cart::clear();
             $this->efectivo = 0;
             $this->change = 0;
 
+
+
             $this->total = Cart::getTotal();
             $this->itemsQuantity = Cart::getTotalQuantity();
-            $this->emit('sale-ok','Venta Registrada');
-            $this->emit('print-ticket',$sale->id);
 
- 
+            $user = User::find(auth()->user()->id)->name;
+            $pdf = PDF::loadView('pdf.ticket', compact('sale','items','user'))->output();
+
+        
+
+            if ($this->efectivo == 0) {
+            $this->emit('refrescar','Carrito Vacio');
+            return response()->streamDownload(
+                fn () =>
+                    print($pdf),
+                        "filename.pdf"
+                    ); 
+           
+            }
+            
+         
 
         } catch (Exception $e) {
             DB::rollback();
              $this->emit('sale-error',$e->getMessage());
         }
+
 
     }
 

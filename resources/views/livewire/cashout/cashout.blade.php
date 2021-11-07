@@ -49,7 +49,7 @@
                 <div class="row mt-5">
                     <div class="col-sm-12 col-md-4 mbmobile">
                         <div class="connect-sorting bg-dark">
-                            <h5 class="text-white">Ventas Totales: {{number_format($total,2)}}</h5>
+                            <h5 class="text-white">Ventas Totales: ${{number_format($total,2)}}</h5>
                             <h5 class="text-white">Articulos: {{$items}}</h5>
                         </div>
                     </div>
