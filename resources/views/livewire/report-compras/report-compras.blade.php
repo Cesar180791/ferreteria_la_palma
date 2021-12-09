@@ -45,7 +45,8 @@
                                     <button wire:click="$refresh" class="btn btn-dark btn-block">Consultar</button>
 
                                     <a class="btn btn-dark btn-block {{count($data) < 1 ? 'disabled' : '' }}" 
-                                    href="{{ url('reporte-venta-exportar-pdf' . '/' . $userId . '/' . $reportType . '/' . $dateFrom . '/' . $dateTo) }}" target="_blank">Generar PDF</a>
+                                    href="{{ url('reporte-compra-exportar-pdf' . '/' . $userId . '/' . $reportType . '/' . $dateFrom . '/' . $dateTo) }}" target="_blank">Generar PDF</a>
+
                                 </div>
                             </div>
                         </div>
@@ -56,9 +57,10 @@
                         <thead class="text-white" style="background: #3B3F5C">
                             <tr>
                                 <th class="table-th text-white text-center">Folio</th>
+                                <th class="table-th text-white text-center">Proveedor</th>
+                                <th class="table-th text-white text-center">Factura</th>
                                 <th class="table-th text-white text-center">Total</th>
                                 <th class="table-th text-white text-center">Items</th>
-                                <th class="table-th text-white text-center">Estado</th>
                                 <th class="table-th text-white text-center">Usuario</th>
                                 <th class="table-th text-white text-center">Fecha</th>
                                 <th class="table-th text-white text-center" width="50px"></th>
@@ -71,9 +73,10 @@
                             @foreach($data as $d)
                             <tr>
                                 <td class="text-center"><h6>{{$d->id}}</h6></td>
+                                <td class="text-center"><h6>{{$d->nombreProveedor}}</h6></td>
+                                <td class="text-center"><h6>{{$d->factura}}</h6></td>
                                 <td class="text-center"><h6>${{number_format($d->total,2)}}</h6></td>
-                                <td class="text-center"><h6>{{$d->items}}</h6></td>
-                                <td class="text-center"><h6>{{$d->status}}</h6></td>
+                                <td class="text-center"><h6>{{$d->item}}</h6></td>
                                 <td class="text-center"><h6>{{$d->user}}</h6></td>
                                 <td class="text-center"><h6>{{\Carbon\Carbon::parse($d->created_at)->format('d-m-y')}}</h6></td>
                                 <td class="text-center" width="50px">
@@ -89,7 +92,7 @@
                 </div>
             </div>
         </div>
-        @include('livewire.reports.sales-detail')
+        @include('livewire.report-compras.purchase-detail')
     </div>
 </div>
 <script>

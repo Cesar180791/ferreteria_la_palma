@@ -51,7 +51,7 @@
 								</div>
 								@error('factura') <span class="text-danger er">{{ $message }}</span> @enderror
 							</div>
-							<div class="col-sm-12 col-md-12 col-lg-6 mt-3">
+							<div class="col-sm-12 col-md-12 col-lg-12 mt-3">
 							
 								<button wire:click.prevent="saveShop" class="btn btn-dark btn-block">
 									GUARDAR F9

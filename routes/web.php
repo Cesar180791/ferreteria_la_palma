@@ -14,8 +14,10 @@ use App\Http\Livewire\PermisosController;
 use App\Http\Livewire\AsignarController;
 use App\Http\Livewire\UserController;
 use App\Http\Livewire\CashoutController;
+use App\Http\Livewire\ReportComprasController;
 use App\Http\Livewire\ReportsController;
 use App\Http\Controllers\ExportController;
+use App\Http\Controllers\ExportComprasController;
 
 
 /*
@@ -52,10 +54,12 @@ Route::group(['middleware' => ['role:Administrador']], function () {
     Route::get('roles', RolesController::class);
     Route::get('consulta-ventas', CashoutController::class);
     Route::get('reporte-venta', ReportsController::class);
+    Route::get('reporte-compra', ReportComprasController::class);
     Route::get('reporte-venta-exportar-pdf/{user}/{type}/{f1}/{f2}', [ExportController::class,'reportVentaPDF']);
     Route::get('reporte-venta-exportar-pdf/{user}/{type}', [ExportController::class,'reportVentaPDF']);
 
-
+    Route::get('reporte-compra-exportar-pdf/{user}/{type}/{f1}/{f2}', [ExportComprasController::class,'reportCompraPDF']);
+    Route::get('reporte-compra-exportar-pdf/{user}/{type}', [ExportComprasController::class,'reportCompraPDF']);
    
 
 });

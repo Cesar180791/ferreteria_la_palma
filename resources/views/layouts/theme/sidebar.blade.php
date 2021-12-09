@@ -3,8 +3,8 @@
             <nav id="compactSidebar">
                 <ul class="navbar-nav theme-brand flex-row">
                     <li class="nav-item theme-logo">
-                        <a href="index.html">
-                            <img src="{{ asset('assets/img/logoF.png') }}" class="navbar-logo" alt="logo">
+                        <a href="#">
+                            <img src="{{ asset('assets/img/palma.jpg') }}" class="navbar-logo" alt="logo">
                         </a>
                     </li>
                 </ul>

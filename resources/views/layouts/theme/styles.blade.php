@@ -32,6 +32,19 @@
 <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 <style>
+
+    .sidebar-wrapper #compactSidebar .theme-brand .theme-logo {
+    width: 80px!important;
+    height: 50px!important;
+}
+
+    .sidebar-wrapper #compactSidebar .theme-brand img {
+    width: 80px!important;
+    height: 45px!important;
+}
+
+
+
     aside{
         display: none!important;
     }

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Reporte de Ventas</title>
+	<title>Reporte de Compras</title>
 	<link rel="stylesheet" type="text/css" href="{{asset('css/custom_pdf.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/custom_page.css') }}">
 </head>
@@ -22,9 +22,9 @@
 				</td>
 				<td width="70%" class="text-left text-company" style="vertical-align: top; padding-top: 10px">
 					@if($reportType == 0)
-					<span style="font-size: 16px"><strong>Reporte de Venta del Dia</strong></span>
+					<span style="font-size: 16px"><strong>Reporte de Compras del Dia</strong></span>
 					@else
-					<span style="font-size: 16px"><strong>Reporte de Venta por Fechas</strong></span>
+					<span style="font-size: 16px"><strong>Reporte de Compras por Fechas</strong></span>
 					@endif
 					<br>
 					@if($reportType != 0)
@@ -44,7 +44,9 @@
 			<thead>
 				<tr>
 					<th width="10%">Folio</th>
-					<th width="12%">Importe</th>
+					<th width="25%">Proveedor</th>
+					<th width="15%">Factura</th>
+					<th width="12%">Total</th>
 					<th width="10%">Items</th>
 					<th>Usuario</th>	
 					<th width="18%">Fecha</th>
@@ -54,8 +56,10 @@
 				@foreach($data as $item)
 				<tr>
 					<td align="center">{{$item->id}}</td>
+					<td align="center">{{$item->nombreProveedor}}</td>
+					<td align="center">{{$item->factura}}</td>
 					<td align="center">{{number_format($item->total,2)}}</td>
-					<td align="center">{{$item->items}}</td>
+					<td align="center">{{$item->item}}</td>
 					<td align="center">{{$item->user}}</td>
 					<td align="center">{{$item->created_at}}</td>
 				</tr>
@@ -73,6 +77,7 @@
 						{{$data->sum('items')}}
 					</td>
 					<td colspan="2"></td>
+				</tr>
 				</tr>
 			</tfoot>
 		</table>

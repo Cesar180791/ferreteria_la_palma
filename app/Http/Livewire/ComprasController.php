@@ -285,11 +285,11 @@ class ComprasController extends Component
                 
                 ///se recorre el detalle para guardar en la tabla detalle de ventas 
                 foreach($items as $item){
-                    PurchaseDetail::create([
+                   PurchaseDetail::create([
                         'purchases_id' => $purchase->id,
                         'product_id' => $item->id,
                         'cost' => $item->attributes[0],
-                        'IVAcost' => $item->attributes[1],
+                        'IVACost' => $item->attributes[1],
                         'costIVA' => $item->attributes[2],
                         'price' => $item->attributes[3],
                         'IVAprice' => $item->attributes[4],
@@ -306,20 +306,13 @@ class ComprasController extends Component
                     } else{
                         $product->quantity += $item->quantity;
                     }
-                    if($product->cost == 0){
-                            $product->cost = $item->attributes[0];
-                            $product->IVAcost = $item->attributes[1];
-                            $product->costIVA = $item->attributes[2];
-                      }else {
-                        $product->cost = ($product->cost + $item->attributes[0]) / 2;
-                        $product->IVAcost = ($product->IVAcost + $item->attributes[1]) / 2;
-                        $product->costIVA = ($product->costIVA + $item->attributes[2]) / 2;
-                      }
-
-                      $product->price = $item->attributes[3];
-                      $product->IVAprice = $item->attributes[4];
-                      $product->priceIVA = $item->attributes[5];
-                      $product->save();
+                    $product->cost = $item->attributes[0];
+                    $product->IVAcost = $item->attributes[1];
+                    $product->costIVA = $item->attributes[2];
+                    $product->price = $item->attributes[3];
+                    $product->IVAprice = $item->attributes[4];
+                    $product->priceIVA = $item->attributes[5];
+                    $product->save();
         
 
                      //Fin  actualizar la cantidad de cupones
