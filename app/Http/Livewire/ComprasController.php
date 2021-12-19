@@ -61,7 +61,7 @@ class ComprasController extends Component
         'clearCart' => 'clearCart',
         'saveSale' => 'saveSale',
         'reset' => 'resetUI'
-    ]; 
+    ];  
 
        public function addItem($id, $cant = 1){
 

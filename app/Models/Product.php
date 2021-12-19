@@ -17,7 +17,6 @@ class Product extends Model
         'price',
         'IVAprice',
         'priceIVA',
-        'presentation_id',
         'sub_category_id'
     ];
 

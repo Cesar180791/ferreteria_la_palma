@@ -7,11 +7,12 @@
                 </h4>
                 <ul class="tabs tab-pills">
                     <li style="list-style: none;">
-                        <a href="javascript:void(0)" class="tabmenu btn bg-dark" data-toggle="modal" data-target="#theModal">Agregar</a>
+                        <a href="javascript:void(0)" class="tabmenu btn bg-dark" data-toggle="modal"
+                            data-target="#theModal">Agregar</a>
                     </li>
                 </ul>
             </div>
-             @include('common.searchbox')
+            @include('common.searchbox')
             <div class="widget-content">
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped mt-1">
@@ -29,17 +30,31 @@
                         <tbody>
                             @foreach($products as $product)
                             <tr>
-                                <td><p class="text-center">{{$product-> id}}</p></td>
-                                <td><p class="text-center">{{$product-> name}}</p></td>
-                                <td><p class="text-center">${{$product-> costIVA}}</p></td>
-                                <td><p class="text-center">${{$product-> priceIVA}}</p></td>
-                                <td><p class="text-center">{{$product-> quantity}}</p></td>
-                                <td><p class="text-center">{{$product-> sub_category}}</p></td>
+                                <td>
+                                    <p class="text-center">{{$product-> id}}</p>
+                                </td>
+                                <td>
+                                    <p class="text-center">{{$product-> name}}</p>
+                                </td>
+                                <td>
+                                    <p class="text-center">${{$product-> costIVA}}</p>
+                                </td>
+                                <td>
+                                    <p class="text-center">${{$product-> priceIVA}}</p>
+                                </td>
+                                <td>
+                                    <p class="text-center">{{$product-> quantity}}</p>
+                                </td>
+                                <td>
+                                    <p class="text-center">{{$product-> sub_category}}</p>
+                                </td>
                                 <td class="text-center">
-                                    <a href="javascript:void(0)" class="btn btn-dark mtmobile" wire:click.prevent="Edit({{$product->id}})" title="Edit">
+                                    <a href="javascript:void(0)" class="btn btn-dark mtmobile"
+                                        wire:click.prevent="Edit({{$product->id}})" title="Edit">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="javascript:void(0)" class="btn btn-danger"  onclick="Confirm('{{$product->id}}')"  title="Delete">
+                                    <a href="javascript:void(0)" class="btn btn-danger"
+                                        onclick="Confirm('{{$product->id}}')" title="Delete">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>
@@ -52,46 +67,46 @@
             </div>
         </div>
     </div>
-   @include('livewire.product.form')
+    @include('livewire.product.form')
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function(){
-         window.livewire.on('product-added', msg=>{
-            $('#theModal').modal('hide');
-             swal({
-             title: 'Producto Creado con Exito!',
-             text: msg,
-             type: 'success',
-         })
-        });
-        window.livewire.on('product-update', msg=>{
+    document.addEventListener('DOMContentLoaded', function () {
+        window.livewire.on('product-added', msg => {
             $('#theModal').modal('hide');
             swal({
-             title: 'Producto Editado!',
-             text: msg,
-             type: 'success',
-         })
+                title: 'Producto Creado con Exito!',
+                text: msg,
+                type: 'success',
+            })
         });
-         window.livewire.on('product-deleted', msg=>{
+        window.livewire.on('product-update', msg => {
+            $('#theModal').modal('hide');
             swal({
-             title: 'Producto Eliminado!',
-             text: msg,
-             type: 'success',
-         })
+                title: 'Producto Editado!',
+                text: msg,
+                type: 'success',
+            })
         });
-         window.livewire.on('show-modal', msg=>{
+        window.livewire.on('product-deleted', msg => {
+            swal({
+                title: 'Producto Eliminado!',
+                text: msg,
+                type: 'success',
+            })
+        });
+        window.livewire.on('show-modal', msg => {
             $('#theModal').modal('show');
         });
-         window.livewire.on('modal-hide', msg=>{
+        window.livewire.on('modal-hide', msg => {
             $('#theModal').modal('hide');
         });
     });
 
 
 
-    function Confirm(id){
-        swal({ 
+    function Confirm(id) {
+        swal({
             title: 'Confirmar',
             text: '¿Confirmas eliminar el registro?',
             type: 'warning',
@@ -101,11 +116,12 @@
             confirmButtonColor: '#3B3F5C',
             confirmButtonText: 'Aceptar'
 
-        }).then(function(result){
-           if (result.value) {
-            window.livewire.emit('deleteRow', id)
-            swal.close() 
-           } 
+        }).then(function (result) {
+            if (result.value) {
+                window.livewire.emit('deleteRow', id)
+                swal.close()
+            }
         })
     }
+
 </script>

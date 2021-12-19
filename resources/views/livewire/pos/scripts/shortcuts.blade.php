@@ -37,4 +37,5 @@
           $('#facturacion').show();
           livewire.emit('reset')
 	})
+	
 </script>
